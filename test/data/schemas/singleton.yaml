@@ -1,0 +1,18 @@
+# -*- mode: yaml; tab-width: 2; indent-tabs-mode: nil; -*-
+---
+class: Config
+type: map
+mapping:
+  "a":
+    type: map
+    mapping:
+      "b": { type: int, required: yes }
+      "c": { type: int, required: yes }
+      "d": { type: int, required: yes }
+      "e": { type: int, required: yes }
+      "f":
+        type: seq
+        required: no
+        sequence:
+          - type: str
+            unique: yes

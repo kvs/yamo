@@ -1,0 +1,33 @@
+---
+class: Collection
+mapping:
+    "a":
+        type: str
+        enum:
+          - a
+          - b
+        default: "a"
+    "b":
+        type: map
+        mapping:
+            "a":
+                type: seq
+                required: no
+                sequence:
+                  - { type: str, unique: yes }
+            "b":
+                type: any
+                default: true
+            "c":
+                type: seq
+                required: no
+                sequence:
+                  - { type: str, unique: yes }
+    "c":
+        type: str
+        pattern: /^(a|b|c)$/
+        required: no
+    "d":
+        type: str
+        name: HookOne
+        required: yes

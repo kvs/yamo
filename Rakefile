@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'rake'
 
 begin
@@ -11,6 +10,8 @@ begin
     gem.homepage = "http://github.com/kvs/yamo"
     gem.authors = ["Kenneth Vestergaard Schmidt"]
     gem.add_development_dependency "yard", ">= 0"
+    gem.add_dependency('kwalify', '>=0.7.1')
+    gem.required_ruby_version = '>= 1.9.1'
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

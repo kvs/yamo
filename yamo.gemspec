@@ -40,11 +40,13 @@ Gem::Specification.new do |s|
      "test/helper.rb",
      "test/test_collection.rb",
      "test/test_singleton.rb",
-     "test/test_validation.rb"
+     "test/test_validation.rb",
+     "yamo.gemspec"
   ]
   s.homepage = %q{http://github.com/kvs/yamo}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
+  s.required_ruby_version = Gem::Requirement.new(">= 1.9.1")
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{YAML Model Objects}
   s.test_files = [
@@ -60,11 +62,14 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<yard>, [">= 0"])
+      s.add_runtime_dependency(%q<kwalify>, [">= 0.7.1"])
     else
       s.add_dependency(%q<yard>, [">= 0"])
+      s.add_dependency(%q<kwalify>, [">= 0.7.1"])
     end
   else
     s.add_dependency(%q<yard>, [">= 0"])
+    s.add_dependency(%q<kwalify>, [">= 0.7.1"])
   end
 end
 
